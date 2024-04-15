@@ -3,6 +3,7 @@ console.log(typeof Object) //Object em JS é function
 class Produto {}
 console.log(typeof Produto) //Class em JS é uma function
 
+<<<<<<< HEAD
 //Funcao sem retorno
 function imprimirSoma(a, b){
     console.log(a + b)
@@ -40,3 +41,5 @@ console.log(arrowSoma(6, 6))
 const subtracao = (a, b) => a - b
 
 console.log(subtracao(3, 3))
+=======
+>>>>>>> bf768514a4146e1f90b0c97e949fea226e6ed3c0
