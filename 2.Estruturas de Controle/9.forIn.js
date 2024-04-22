@@ -39,5 +39,5 @@ console.log("\n")
 console.log("Lendo Object")
 
 for(let atributo in pessoa){ //Importante usar a palaVra let para garantir que a variavel seja LOCAL
-    console.log(`Indice ${i}: ${pessoa[atributo]} `)
+    console.log(`Indice ${atributo}: ${pessoa[atributo]} `)
 }
