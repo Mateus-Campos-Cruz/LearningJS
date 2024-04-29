@@ -9,7 +9,7 @@ console.log(pessoa)
 // de pessoa, você esta tentando mudar o endereço de memória
 //Exemplo: pessoa = {nome: 'Ana'}
 
-//Object.freeze - "Congela o objeto", ou seja, não é possível alterar o objeto
+//Object.freeze - "Congela o objeto", ou seja, não é possível alterar os dados objeto
 Object.freeze(pessoa)//Transformou o objeto constante, além da variável que armazena ele
 
 pessoa.nome = 'Mateus'
