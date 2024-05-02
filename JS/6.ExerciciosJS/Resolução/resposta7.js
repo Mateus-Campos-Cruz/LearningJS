@@ -4,8 +4,12 @@
  * minimo ou a maximo. Caso o parametro inclusivo nao seja informado, seu valor padrao deverá ser false, 
  * portanto, a lógica será exclusiva, não considerando se o numero é igual a minimo ou a maximo. */
 
-function calculo(numero, minimo, maximo, inclusivo = false) {
-    if(numero > minimo && numero < maximo){
-
+function verificarIntervalo(numero, minimo, maximo, inclusivo = false) {
+    if (inclusivo) {
+        return numero >= minimo && numero <= maximo;
+    } else {
+        return numero > minimo && numero < maximo;
     }
 }
+
+console.log(verificarIntervalo(4,10,50))
