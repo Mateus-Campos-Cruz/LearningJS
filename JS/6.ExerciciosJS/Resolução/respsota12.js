@@ -12,3 +12,19 @@ Você escreverá uma função que recebe um objeto como primeiro param, e, como 
 o nome de uma propriedade contida nesse objeto. Em seguida, retorne uma cópia desse objeto sem 
 a propriedade especificada no segundo param.
  */
+
+function removerPropriedade(objeto, propriedade) {
+    // Criar uma cópia do objeto usando o spread operator
+    const copiaObjeto = { ...objeto };
+  
+    // Verificar se a propriedade existe no objeto
+    if (copiaObjeto.hasOwnProperty(propriedade)) {
+      // Remover a propriedade da cópia do objeto
+      delete copiaObjeto[propriedade];
+    }
+  
+    // Retornar a cópia do objeto sem a propriedade especificada
+    return copiaObjeto;
+  }
+
+  console.log(removerPropriedade({a: 1, b: 3}, 'a'))
