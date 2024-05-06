@@ -4,21 +4,12 @@
 Escreva uma função que recebe como primeiro parametro uma palabra e, 
 como segundo parametro, um array de strings. A função deverá filtrar 
 as palavras do array que contém nelas a string do primeiro parametro. */
-
-let palavra = 'mateus'
-let vetorPalavras = ['mateus', 'bruna', 'deus', 'mateus']
+let palavra = 'mat';
+let vetorPalavras = ['mateus', 'bruna', 'deus', 'mateus'];
 
 function identificarPalavras(palavra, vetorPalavras) {
-
-    let contador = 0
-
-    for(let i = 0; i < vetorPalavras.length; i++) {
-        if(vetorPalavras[i] == palavra){
-            contador++
-        }
-    }
-
-    return contador
+    let palavrasFiltradas = vetorPalavras.filter(palavraArray => palavraArray.includes(palavra));
+    return palavrasFiltradas;
 }
 
-console.log(identificarPalavras(palavra, vetorPalavras))
+console.log(identificarPalavras(palavra, vetorPalavras));
