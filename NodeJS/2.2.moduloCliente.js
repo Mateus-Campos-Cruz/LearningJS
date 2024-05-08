@@ -10,3 +10,5 @@ console.log(moduloA) //O this é um objeto
 console.log(moduloB.bomDia)
 console.log(moduloB.boaNoite())
 console.log(moduloB)
+
+//npm - gerenciador de pacotes do nodenpm
