@@ -36,7 +36,24 @@
  * Classe B - Primeiro octeto entre 128 e 191 - 65.536 endereços IP cada rede
  * Classe C - Primeiro octeto entre 192 e 223 - 256 endereços IP cada rede
  * 
- * - Classes reservadas
- * Classe D - Primeiro octeto entre 224 e 239 
- * CLasse E - Primeiro octeto entre 240 e 255
- */
+ * - Classes reservadas - https://www.youtube.com/watch?v=a1OSFX6bZPY
+ * ##IPs Restritos ou provados e reservados (RFC 1918)
+ * Unicast - Único host
+ * Multicast - Múltiplos hosts
+ * Broadcast - Para todos hosts da mesma rede
+ * Anycast - Hosts mais próximos
+ * Classe D - Primeiro octeto entre 224 e 239 - Multicast
+ * CLasse E - Primeiro octeto entre 240 e 255 - Testes de novas tecnologias
+ * 
+ * #IPs restrito/privados
+ * 10.0.0.0/8 -  Rede interna
+ * 172.16.0.0/12 - Rede interna
+ * 192.168.0.0 - Rede interna
+ * 
+ * #IPs reservados 
+ * 
+ * 127.0.0.0/8 - loopback - localhost - 127.0.0.1 - máquina que aponta para ela mesma
+    169.254.0.0/16 - Apipa - IP automático gerado pelo SO
+ * 0.0.0.0 - IP de inicialização
+    255.255.255.255 - Broadcast geral - manda para todos do mundo
+*/
