@@ -56,4 +56,9 @@
     169.254.0.0/16 - Apipa - IP automático gerado pelo SO
  * 0.0.0.0 - IP de inicialização
     255.255.255.255 - Broadcast geral - manda para todos do mundo
+
+   ##Conceito de Portas
+
+   São processos usados para comunicação de dois ou mais computadores
+
 */
