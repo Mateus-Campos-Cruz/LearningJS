@@ -7,7 +7,108 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+
+        body {
+            margin: 0;
+        }
+
+        
+        .cabecalho{
+            font-family: 'Oswald';
+            background-color: rgb(70, 70, 70);
+            height: 45px;
+            padding: 5px;
+        }
+
+        .logo {
+            display: inline;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo a {           
+            float: left;
+        }
+    
+
+        .logo a img{
+            width: 200px; 
+            
+        }
+
+        .menu-toggle {
+            float: right;
+            display: none;
+        }
+
+        .menu {
+          
+            padding: 0px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            float: left;
+            
+        }
+
+        .menu ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            margin: 0;            
+        }
+        .menu ul li {
+            display: inline-block;
+            height: 40px;
+            margin: 0 5px;
+        }
+
+        .menu ul li a {
+            display: inline-block;
+            height: 40px;
+            width: 50px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+
+        .menu ul li a:hover {
+            background-color: rgb(90, 123, 214);
+        }
+
+        .autenticacao {
+            float: right;
+            padding: 10px;
+            width: 150px;
+            
+        }
+
+       
+        .botao {
+            background-color: rgb(252, 55, 20);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-left: 15px;
+            box-sizing: border-box;
+        }
+
+        @media(max-width: 680px) {
+            .autenticacao {
+                display: none;
+            }
+        }
+
+        @media(max-width: 680px) {
+            .menu-toggle {
+            display:inline
+        }
+        }
+
     </style>
 </head>
 
