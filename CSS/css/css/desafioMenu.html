@@ -1,158 +1,172 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Desafio Menu</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"/>
     <style>
+      body {
+        margin: 0;
+      }
 
-        body {
-            margin: 0;
-        }
+      .cabecalho {
+        font-family: "Oswald";
+        background-color: rgb(70, 70, 70);
+        height: 45px;
+        padding: 5px;
+      }
 
-        
-        .cabecalho{
-            font-family: 'Oswald';
-            background-color: rgb(70, 70, 70);
-            height: 45px;
-            padding: 5px;
-        }
+      .logo {
+        display: inline;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
 
-        .logo {
-            display: inline;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
+      .logo a {
+        float: left;
+      }
 
-        .logo a {           
-            float: left;
-        }
-    
+      .logo a img {
+        width: 200px;
+      }
 
-        .logo a img{
-            width: 200px; 
-            
-        }
+      .menu-toggle {
+        float: right;
+        display: none;
+      }
 
-        .menu-toggle {
-            float: right;
-            display: none;
-        }
+      .menu {
+        padding: 0px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        float: left;
+      }
 
-        .menu {
-          
-            padding: 0px;
-            width: 300px;
-            display: flex;
-            justify-content: center;
-            float: left;
-            
-        }
+      .menu ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        margin: 0;
+      }
+      .menu ul li {
+        display: inline-block;
+        height: 40px;
+        margin: 0 5px;
+      }
 
-        .menu ul {
-            padding: 0;
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            margin: 0;            
-        }
-        .menu ul li {
-            display: inline-block;
-            height: 40px;
-            margin: 0 5px;
-        }
+      .menu ul li a {
+        display: inline-block;
+        height: 40px;
+        width: 50px;
+        text-align: center;
+        line-height: 40px;
+      }
 
-        .menu ul li a {
-            display: inline-block;
-            height: 40px;
-            width: 50px;
-            text-align: center;
-            line-height: 40px;
-        }
+      .menu ul li a:hover,
+      .menu ul li a.current {
+        background-color: rgb(90, 123, 214);
+      }
 
+      .autenticacao {
+        float: right;
+        padding: 10px;
+        width: 150px;
+      }
 
-        .menu ul li a:hover {
-            background-color: rgb(90, 123, 214);
-        }
+      .botao {
+        background-color: rgb(252, 55, 20);
+        padding: 8px 15px;
+        border-radius: 20px;
+        margin-left: 15px;
+        box-sizing: border-box;
+      }
 
+      @media (max-width: 680px) {
         .autenticacao {
-            float: right;
-            padding: 10px;
-            width: 150px;
-            
+          display: none;
         }
+      }
 
-       
-        .botao {
-            background-color: rgb(252, 55, 20);
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin-left: 15px;
-            box-sizing: border-box;
+      @media (max-width: 530px) {
+        .menu-toggle {
+          display: inline;
         }
+      }
 
-        @media(max-width: 680px) {
-            .autenticacao {
-                display: none;
-            }
+      @media (max-width: 530px) {
+        .menu {
+          display: none;
         }
-
-        @media(max-width: 530px) {
-            .menu-toggle {
-            display:inline
-        }
-        }
-
-        @media(max-width: 530px) {
-            .menu {
-            display:none
-        }
-        }
-
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="cabecalho">
-        <div class="logo">
-            <a href="#inicio">
-                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
-            </a>
-        </div>
-        <button class="menu-toggle">
-            <i class="fa fa-lg fa-bars"></i>
-        </button>
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a href="#inicio">Início</a>
-                </li>
-                <li>
-                    <a href="#cursos">Cursos</a>
-                </li>
-                <li>
-                    <a href="#sobre">Sobre</a>
-                </li>
-                <li>
-                    <a href="#contato">Contato</a>
-                </li>
-            </ul>
-        </nav>
-        <aside class="autenticacao">
-            <a href="#login">Login</a>
-            <a href="#registar" class="botao destaque">Registrar</a>
-        </aside>
+      <div class="logo">
+        <a href="#inicio">
+          <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+        </a>
+      </div>
+      <button class="menu-toggle">
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#inicio">Início</a>
+          </li>
+          <li>
+            <a href="#cursos">Cursos</a>
+          </li>
+          <li>
+            <a href="#sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <aside class="autenticacao">
+        <a href="#login">Login</a>
+        <a href="#registar" class="botao destaque">Registrar</a>
+      </aside>
     </header>
 
     <script>
-        // ...
-    </script>
-</body>
+      if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
 
+        if (hash === "inicio") {
+          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
+          if (menuItem) {
+            menuItem.classList.add("current");
+          }
+        } else if (hash === "cursos") {
+          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
+          if (menuItem) {
+            menuItem.classList.add("current");
+          }
+        } else if (hash === "sobre") {
+          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
+          if (menuItem) {
+            menuItem.classList.add("current");
+          }
+        } else if (hash === "contato") {
+          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
+          if (menuItem) {
+            menuItem.classList.add("current");
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
