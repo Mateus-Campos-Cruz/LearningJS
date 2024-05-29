@@ -7,101 +7,109 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"/>
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
       body {
         margin: 0;
+        font-family: "Oswald", sans-serif;
+        background-color: lightgray;
       }
 
       .cabecalho {
-        font-family: "Oswald";
-        background-color: rgb(70, 70, 70);
-        height: 45px;
-        padding: 5px;
+        
+        background-color: #333;
+        border-bottom: solid 5px #4faddb;
+        height: 80px;
+        box-sizing: content-box;
       }
 
       .logo {
-        display: inline;
-      }
-      a {
-        color: white;
-        text-decoration: none;
+        display: inline-block;
+        height: 80px;
+        padding: 15px;
       }
 
-      .logo a {
-        float: left;
+      .logo img {
+        height: 100%;
       }
 
-      .logo a img {
-        width: 200px;
-      }
 
       .menu-toggle {
         float: right;
+        color: #eee;
+        background-color: #555;
+        border: solid 1px #777;
+        border-radius: 5px;
+        height: 40px;
+        padding: 10px 20px;
+        margin: 20px 15px;
         display: none;
       }
 
       .menu {
-        padding: 0px;
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        float: left;
+        display: inline-block;
+        vertical-align: top;
+        height: 80px;
+        padding: 25px;
       }
 
       .menu ul {
         padding: 0;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
         margin: 0;
+        list-style: none;        
+        
       }
       .menu ul li {
         display: inline-block;
-        height: 40px;
-        margin: 0 5px;
       }
 
-      .menu ul li a {
-        display: inline-block;
-        height: 40px;
-        width: 50px;
-        text-align: center;
-        line-height: 40px;
+      .cabecalho a {
+        text-decoration: none;
+        color: white;
+       font-size: 1.3em ;
       }
 
-      .menu ul li a:hover,
-      .menu ul li a.current {
-        background-color: rgb(90, 123, 214);
+      .menu a {
+        padding: 15px;
       }
 
       .autenticacao {
         float: right;
-        padding: 10px;
-        width: 150px;
+        height: 80px;
+        padding: 15px;
       }
 
-      .botao {
+      .menu a:hover,
+      .menu a.current {
+        background-color: #5a7bd6;
+        color: #000;
+      }
+
+      .botao {       
+        padding: 10px 25px;
+        border-radius: 30px;
+        margin: 10px;
+      }
+
+      .destaque {
         background-color: rgb(252, 55, 20);
-        padding: 8px 15px;
-        border-radius: 20px;
-        margin-left: 15px;
-        box-sizing: border-box;
       }
 
-      @media (max-width: 680px) {
+      @media (max-width: 887px) {
         .autenticacao {
           display: none;
         }
       }
 
-      @media (max-width: 530px) {
+      @media (max-width: 674px) {
         .menu-toggle {
           display: inline;
         }
       }
 
-      @media (max-width: 530px) {
+      @media (max-width: 674px) {
         .menu {
           display: none;
         }
@@ -142,31 +150,15 @@
     </header>
 
     <script>
-      if (window.location.hash) {
-        const hash = window.location.hash.substring(1);
-
-        if (hash === "inicio") {
-          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
-          if (menuItem) {
-            menuItem.classList.add("current");
-          }
-        } else if (hash === "cursos") {
-          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
-          if (menuItem) {
-            menuItem.classList.add("current");
-          }
-        } else if (hash === "sobre") {
-          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
-          if (menuItem) {
-            menuItem.classList.add("current");
-          }
-        } else if (hash === "contato") {
-          const menuItem = document.querySelector(`.menu ul li a[href="#${hash}"]`);
-          if (menuItem) {
-            menuItem.classList.add("current");
-          }
-        }
-      }
+      window.onhashchange = function(e) {
+        const oldURL = e.oldURL.split('#')[1]
+        const newURL = e.newURL.split('#')[1]
+        console.log(oldURL, newURL)
+        const oldMenu = document.querySelector(` .menu a[href='#${oldURL}']`)
+        const newMenu = document.querySelector(` .menu a[href='#${newURL}']`)
+        oldMenu && oldMenu.classList.remove('current')
+        newMenu && newMenu.classList.add('current')
+    }
     </script>
   </body>
 </html>
